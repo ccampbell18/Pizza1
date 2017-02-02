@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Pizza1</string>
+    <string name="compLabel">Poppy Pizzeria</string>
+    <string name="sizeLabel">Pizza Size: </string>
+    <string name="topLabel">Toppings: </string>
+    <string name="pep">Pepperoni</string>
+    <string name="mush">Mushroom</string>
+    <string name="saus">Sausage</string>
+    <string name="olive">Black Olives</string>
+    <string name="grPep">Green Peppers</string>
+    <string name="button">Click to Order</string>
+    <string-array name="size_array">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+        <item>Extra Large</item>
+    </string-array>
+</resources>
