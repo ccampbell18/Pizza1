@@ -1,12 +1,15 @@
 package com.example.charl.pizza1;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class DisplayTotalActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class DisplayTotalActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +21,19 @@ public class DisplayTotalActivity extends AppCompatActivity {
 
         String total = extras.getString("Total");
         String size = extras.getString("Size");
+        ArrayList<String> topList = extras.getStringArrayList("Toppings");
 
-        TextView textView = new TextView(this);
-        textView.setTextSize(36);
+        TextView toppingView = (TextView) findViewById(R.id.toppingsView);
+        TextView textView = (TextView) findViewById(R.id.totalView);
+
+        StringBuilder b = new StringBuilder();
+        for (String s : topList){
+            b.append(s + "\n");
+        }
+
+        toppingView.setText("Toppings: " + "\n" + "\n" + b.toString());
 
         textView.setText("Total Cost: " + total + "\n" + "Size: " + size);
 
-        ViewGroup layout = (ViewGroup) findViewById(R.id.activity_display_total);
-        layout.addView(textView);
     }
 }
