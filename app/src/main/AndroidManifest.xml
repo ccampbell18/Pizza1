@@ -15,7 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DisplayTotalActivity"></activity>
+        <activity android:name=".DisplayTotalActivity" />
+        <activity android:name=".DataBaseHelper" />
+        <activity android:name=".LoginDatabaseAdapter"></activity>
     </application>
 
 </manifest>
